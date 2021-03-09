@@ -3,7 +3,12 @@
 	"displayName": "Algo-Mate",
 	"description": "Algo-Mate extension. Learn more at: https://alexbochman.github.io/ClassesAndProjects/SW-Eng/Algo-MateProject/Algo-Mate.html",
 	"version": "0.0.1",
-	"publisher": "Alex Bochman",
+	"publisher": "AlexBochman",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alexbochman/Algo-Mate"
+	},
+	"icon": "./Algo-Mate.png",
 	"engines": {
 		"vscode": "^1.54.0"
 	},
