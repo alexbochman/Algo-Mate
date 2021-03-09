@@ -1,0 +1,9 @@
+{
+    "test": {
+		"prefix": "test",
+		"body": [
+			"C++: Testing out this snippet stuff yooo!"
+		],
+		"description": "Code snippet for testing"
+		}
+}
