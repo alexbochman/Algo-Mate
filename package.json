@@ -2,7 +2,7 @@
 	"name": "algo-mate",
 	"displayName": "Algo-Mate",
 	"description": "Algo-Mate extension. Learn more at: https://alexbochman.github.io/ClassesAndProjects/SW-Eng/Algo-MateProject/Algo-Mate.html",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "AlexBochman",
 	"repository": {
 		"type": "git",
@@ -27,15 +27,15 @@
 			}
 		],
 		"snippets": [
-            {
-                "language": "cpp",
-                "path": "./src/cpp.json"
-            },
 			{
-                "language": "javascript",
-                "path": "./src/javascript.json"
-            }
-        ]
+				"language": "cpp",
+				"path": "./src/cpp.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./src/javascript.json"
+			}
+		]
 	},
 	"scripts": {
 		"lint": "eslint .",
@@ -54,11 +54,11 @@
 		"vscode-test": "^1.5.0"
 	},
 	"keywords": [
-        "snippet",
+		"snippet",
 		"cpp",
 		"java",
 		"javascript",
 		"python",
 		"code"
-    ]
+	]
 }
