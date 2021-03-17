@@ -1,10 +1,11 @@
 language: node_js
 
 os:
-  - linux
+- linux
 
 node_js:
-  - "stable"
+- "stable"
 
 script:
-  - echo "hello world"
+- echo "testing"
+- echo "hello world"
