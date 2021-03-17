@@ -64,6 +64,7 @@
 		"code"
 	],
 	"dependencies": {
-		"@types/jest": "^26.0.21"
+		"@types/jest": "^26.0.21",
+		"vscode": "^1.1.37"
 	}
 }
