@@ -14,11 +14,11 @@
 			" ",
 			"class Singleton {",
 			"\tstatic Singleton *instance;",
-			"\tint data;",
+			"\t${1:int} data;",
 			" ",
 			"\t// Private constructor so that no objects can be created.",
 			"\tSingleton() {",
-			"\t\tdata = 0;",
+			"\t\tdata = ${2:0};",
 			"\t}",
 			" ",
 			"public:",
@@ -28,32 +28,28 @@
 			"\t\treturn instance;",
 			"\t}",
 			" ",
-			"\tint getData() {",
+			"\t${1:int} getData() {",
 			"\t\treturn this->data;",
 			"\t}",
 			" ",
-			"\tvoid setData(int data) {",
+			"\tvoid setData(${1:int} data) {",
 			"\t\tthis->data = data;",
 			"\t}",
-			"};"
+			"};",
+			" ",
+			"// ====================== SINGLETON DEMO ======================",
+			" ",
+			"// Singleton *Singleton::instance = 0;",
+			" ",
+			"//int main() {",
+			"\t// Singleton *s = s->getInstance();",
+    		"\t// cout << s->getData() << endl;",
+    		"\t// s->setData(${3:100});",
+    		"\t// cout << s->getData() << endl;",
+    		"\t// return 0;",
+			"// }"
 		],
 		"description": "Code snippet for singleton design pattern."
-	},
-	"SingletonDemo": {
-		"prefix": "demo_singleton",
-		"body": [
-			"// Initialize pointer to zero so that it can be initialized in first call to getInstance",
-			"Singleton *Singleton::instance = 0;",
-			" ",
-			"int main() {",
-			"\tSingleton *s = s->getInstance();",
-    		"\tcout << s->getData() << endl;",
-    		"\ts->setData(100);",
-    		"\tcout << s->getData() << endl;",
-    		"\treturn 0;",
-			"}"
-		],
-		"description": "Demo code snippet for singleton design pattern."
 	}
 
 }
