@@ -1,3 +1,7 @@
 node_modules
 .vscode-test/
 *.vsix
+main.cpp
+main
+main.o
+Makefile

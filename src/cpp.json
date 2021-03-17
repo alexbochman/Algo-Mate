@@ -5,5 +5,55 @@
 			"C++: Testing out this snippet stuff yooo!"
 		],
 		"description": "Code snippet for testing"
-		}
+		},
+	"Singleton": {
+		"prefix": "singleton",
+		"body": [
+			"// #include <iostream>",
+			"// using namespace std;",
+			" ",
+			"class Singleton {",
+			"\tstatic Singleton *instance;",
+			"\tint data;",
+			" ",
+			"\t// Private constructor so that no objects can be created.",
+			"\tSingleton() {",
+			"\t\tdata = 0;",
+			"\t}",
+			" ",
+			"public:",
+			"\tstatic Singleton *getInstance() {",
+			"\t\tif (!instance)",
+			"\t\t\tinstance = new Singleton;",
+			"\t\treturn instance;",
+			"\t}",
+			" ",
+			"\tint getData() {",
+			"\t\treturn this->data;",
+			"\t}",
+			" ",
+			"\tvoid setData(int data) {",
+			"\t\tthis->data = data;",
+			"\t}",
+			"};"
+		],
+		"description": "Code snippet for singleton design pattern."
+	},
+	"SingletonDemo": {
+		"prefix": "demo_singleton",
+		"body": [
+			"// Initialize pointer to zero so that it can be initialized in first call to getInstance",
+			"Singleton *Singleton::instance = 0;",
+			" ",
+			"int main() {",
+			"\tSingleton *s = s->getInstance();",
+    		"\tcout << s->getData() << endl;",
+    		"\ts->setData(100);",
+    		"\tcout << s->getData() << endl;",
+    		"\treturn 0;",
+			"}"
+		],
+		"description": "Demo code snippet for singleton design pattern."
+	}
+
 }

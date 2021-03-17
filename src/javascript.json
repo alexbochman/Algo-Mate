@@ -2,8 +2,18 @@
     "test": {
 		"prefix": "test",
 		"body": [
-			"JavaScript: Testing out this snippet stuff yooo!"
+			"JavaScript: Testing out this snippet stuff yooo!",
+			"super cool"
 		],
-		"description": "Code snippet for testing"
-		}
+		"description": "Code snippet for testing",
+		"icon": "../Algo-Mate.png"
+		},
+
+	"accumulate": {
+		"prefix": "acl",
+		"body": [
+			"this is the javascript accumulate."
+		],
+		"description": "test"
+	}
 }
