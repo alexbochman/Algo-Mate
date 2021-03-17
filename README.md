@@ -1,4 +1,4 @@
-# Algo-mate README
+# Algo-Mate README
 
 ### Download and Use Extension
 1. Make sure Visual Studio Code is installed. Dowload here: https://code.visualstudio.com/download
