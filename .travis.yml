@@ -7,5 +7,12 @@ node_js:
 - "stable"
 
 script:
-- echo "testing"
-- echo "hello world"
+- |
+  echo ">>> Compile vscode-test"
+  yarn && yarn compile
+  echo ">>> Compiled vscode-test"
+  cd sample
+  echo ">>> Run sample integration test"
+  yarn && yarn compile && yarn test
+
+cache: yarn
