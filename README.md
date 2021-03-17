@@ -1,13 +1,13 @@
 # Algo-mate README
 
 ### Download and Use Extension
-1. Make sure Visual Studio is installed. Dowload here: https://code.visualstudio.com/download
+1. Make sure Visual Studio Code is installed. Dowload here: https://code.visualstudio.com/download
 2. Download and install the extension
    * From Visual Studio Marketplace: https://marketplace.visualstudio.com/items?itemName=AlexBochman.algo-mate
    * From within VS Code, click on the extensions tab on the left-hand sidebar and search for "<strong>Algo-Mate</strong>"
 
 ### Clone, Build, Develop, and Test Instructions
-1. Make sure Visual Studio is installed. Dowload here: https://code.visualstudio.com/download
+1. Make sure Visual Studio Code is installed. Dowload here: https://code.visualstudio.com/download
 2. Clone the latest version of Algo-Mate: https://github.com/alexbochman/Algo-Mate.git
 3. Open the Algo-Mate project in VS Code
     * Make any changes to the files in the "src" folder, or the package.json
