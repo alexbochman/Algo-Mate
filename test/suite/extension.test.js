@@ -14,6 +14,6 @@ suite('Extension Test Suite', () => {
 
     test('should output "my test" for function myTest()', () => {
         const test = myTest;
-        assert(test, ("FAIL"));
+        assert(test, ("FAIL---"));
     });
 });
