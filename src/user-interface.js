@@ -1,7 +1,9 @@
 
 const vscode = require('vscode');
 const data = require("./cpp.json");
+const fs = require('fs');
 
+// Travis CI test function
 function myTest() {
     let testVar = "my test";
     console.log(testVar);
@@ -9,38 +11,40 @@ function myTest() {
 }
 module.exports = myTest;
 
-function printData() {
-	console.log(data);
-}
+function getBuildData() {
+	var buildData = [];
+	var temp;
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
+	// Populating buildData with the time (ms) it takes to print JSON data to console
+	for (let i = 0; i < 100; i++) {
+		const start = Date.now();
+		console.log(data);
+		const end = Date.now();
+
+		temp = end - start;
+		var t = temp.toString();
+		buildData[i] = t;
+	}
+
+	buildData.unshift("");
+	let csvContent = ",Build Time";
+	csvContent += buildData.map((e) => (e += "\n"));
+	let file = vscode.workspace.workspaceFolders[0].uri.path + "/data.csv";
+
+	if (file[1] != "U")
+		file = file.substring(1);
+
+	fs.writeFile(file, csvContent, function (err) {
+		if (err) throw err;
+	});
+}
 
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
 
-	var buildData = [];
-	var temp;
-	for (let i = 0; i < 100; i++) {
-		const start = Date.now();
-		printData();
-		const end = Date.now();
-		temp = end-start;
-		var t = temp.toString();
-		buildData[i] = t;
-	}
-
-	//console.log(t);
-	let myShid =
-    "data:text/csv;charset=utf-8," + buildData.map((e) => e.join(",")).join("\n");
-
-	console.log(buildData);
-
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "algo-mate" is now active!');
+	getBuildData();
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
