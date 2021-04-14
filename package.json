@@ -16,24 +16,37 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:algo-mate.helloWorld"
+		"*"
 	],
-	"main": "./src/user-interface.js",
+	"main": "./src/extension.js",
 	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Algo-Mate",
+			"properties": {}
+		},
 		"commands": [
 			{
-				"command": "algo-mate.helloWorld",
-				"title": "Hello World"
+				"command": "algo-mate.startAlgoMate",
+				"title": "Start Algo-Mate"
 			}
 		],
 		"snippets": [
 			{
 				"language": "cpp",
-				"path": "./src/cpp.json"
+				"path": "./src/snippets/cpp.json"
 			},
 			{
 				"language": "javascript",
-				"path": "./src/javascript.json"
+				"path": "./src/snippets/javascript.json"
+			},
+			{
+				"language": "java",
+				"path": "./src/snippets/java.json"
+			},
+			{
+				"language": "python",
+				"path": "./src/snippets/python.json"
 			}
 		]
 	},

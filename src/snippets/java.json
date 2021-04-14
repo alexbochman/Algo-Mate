@@ -1,0 +1,47 @@
+
+{
+    "Singleton": {
+        "prefix": "singleton",
+        "body": [
+            "class SingleObject {",
+            "\t//create an object of SingleObject",
+            "\tprivate static SingleObject instance = new SingleObject();",
+            " ",
+            "\t//make the constructor private so that this class cannot be instantiated",
+            "\tprivate SingleObject(){}",
+            " ",
+            "\t//Get the only object available",
+            "\tpublic static SingleObject getInstance(){",
+            "\t\treturn instance;",
+            "\t}",
+            " ",
+            "\tpublic void showMessage(){",
+            "\t\tSystem.out.println(\"Hello World!\");",
+            "\t}",
+            "}",
+            "// ====================== SINGLETON DEMO ======================",
+            " ",
+            "public class SingletonPatternDemo {",
+            "\tpublic static void main(String[] args) {",
+            " ",
+            "\t\t//illegal construct",
+            "\t\t//Compile Time Error: The constructor SingleObject() is not visible",
+            "\t\t//SingleObject object = new SingleObject();",
+            " ",
+            "\t\t//Get the only object available",
+            "\t\tSingleObject object = SingleObject.getInstance();",
+            " ",
+            "\t\t//show the message",
+            "\t\tobject.showMessage();",
+            "\t}",
+            "}"
+        ],
+        "description": "Code snippet for singleton design pattern."
+    },
+    "Adapter": {
+        "prefix": "adapter",
+        "body": "YOUR DESIGN PATTERN HERE!",
+        "description": "Code snippet for adapter design pattern."
+    }
+
+}
