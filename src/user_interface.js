@@ -88,7 +88,7 @@ class UserInterface {
         getBuildData(jsData, 1);
         getBuildData(javaData, 2);
         getBuildData(pyData, 3);
-        vscode.window.showInformationMessage('Algo-Mate build data for generated.');
+        vscode.window.showInformationMessage('Algo-Mate build data generated.');
     }
 
 }
