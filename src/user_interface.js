@@ -19,7 +19,6 @@ class UserInterface {
             Number.MIN_SAFE_INTEGER
         );
         this.collapsibleButton.show();
-
         this.updateStatusBar();
     }
 
@@ -29,29 +28,36 @@ class UserInterface {
     }
 
     async openMenu() {
+        langSelection = '';
+        dpSelection = '';
+
         await vscode.window.showQuickPick(dpMenu).then((result) => {
             if (result != null) dpSelection = result.toString();
         });
 
-        if(dpSelection == "[Close Menu]")
-            return;
+        if(dpSelection == "[Close Menu]") return;
         else
             await vscode.window.showQuickPick(langMenu).then((result) => {
-              if (result != null) langSelection = result.toString();
+                if (result != null) langSelection = result.toString();
             });
+
+        if (langSelection == "[BACK]")
+            this.openMenu();
 
         dpSelection = dpSelection.toLowerCase();
         langSelection = langSelection.toLowerCase();
 
+        if (dpSelection == '' || langSelection == '') return;
         if(langSelection != "javascript")
             vscode.env.openExternal(vscode.Uri.parse(
                 "https://refactoring.guru/design-patterns/" + dpSelection + "/" + langSelection + "/example"
-                ));
+            ));
         else
-            console.log("JavaScript needs its own web pages OR we can drop it as a language, or switch languages");
+            vscode.env.openExternal(vscode.Uri.parse(
+                "https://www.dofactory.com/javascript/design-patterns/" + dpSelection
+            ));
+
     }
-
-
 
     collapsible() {
         if (collapsed) {
@@ -62,6 +68,16 @@ class UserInterface {
             collapsed = true;
         }
     }
+
+    // PLACEHOLDER TEXT TESTING FUNC
+    // async showInputBox() {
+    //     const result = await vscode.window.showInputBox({
+    //         value: 'abcdef',
+    //         valueSelection: [2, 4],
+    //         placeHolder: 'For example: fedcba. But not: 123'
+
+	//     });
+    // }
 }
 
 exports.UserInterface = UserInterface;
