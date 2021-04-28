@@ -18,7 +18,11 @@ function activate(context) {
 		UI.openMenu();
 	});
 
-	context.subscriptions.push([openMenu, collapsible]);
+	let getBuildDataButton = vscode.commands.registerCommand(commands.GET_BUILD_DATA_BUTTON, () => {
+		UI.getBuildDataButton();
+	});
+
+	context.subscriptions.push([openMenu, collapsible, getBuildDataButton]);
 }
 
 function deactivate() {}
