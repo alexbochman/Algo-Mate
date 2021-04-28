@@ -78,8 +78,8 @@
 		"code"
 	],
 	"dependencies": {
-		"@types/jest": "^26.0.21",
-		"chai": "^4.3.4"
+		"@types/jest": "^26.0.21"
+
 	},
 	"directories": {
 		"test": "test"
