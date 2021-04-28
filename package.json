@@ -2,7 +2,7 @@
 	"name": "algo-mate",
 	"displayName": "Algo-Mate",
 	"description": "Algo-Mate extension. Learn more at: https://alexbochman.github.io/ClassesAndProjects/SW-Eng/Algo-MateProject/Algo-Mate.html",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "AlexBochman",
 	"repository": {
 		"type": "git",
@@ -79,7 +79,6 @@
 	],
 	"dependencies": {
 		"@types/jest": "^26.0.21"
-
 	},
 	"directories": {
 		"test": "test"
